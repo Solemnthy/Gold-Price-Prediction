@@ -35,6 +35,10 @@ set `ï»¿date` = str_to_date(`ï»¿date`, '%m/%d/%Y');
 alter table gold_price_prediction
 rename column `ï»¿date` to `date`;
 
+-- Modify the column `date` to date for proper date format
+alter table gold_price_prediction
+modify column `date` date;
+
 -- Verify the updates
 select * 
 from gold_price_prediction;
